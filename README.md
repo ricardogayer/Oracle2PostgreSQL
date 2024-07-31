@@ -96,7 +96,7 @@ create table produto (
 
 ```
 
-Select na tabela produto do PostgreSQL usando o TablePlus
+Select na tabela produto do PostgreSQL usando o TablePlus (após a execução do programa Python)
 
 ![Select na tabela produto](./assets/PostgreSQL_Destino.png "Select na tabela produto")
 
