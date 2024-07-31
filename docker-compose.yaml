@@ -1,0 +1,25 @@
+services:
+  oracle:
+    image: container-registry.oracle.com/database/free:latest
+    container_name: oracle
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_PWD=Prud@123
+    networks:
+      - oracle2postgresql
+
+  postgresql:
+    image: postgres:16.3-alpine
+    container_name: postgresql
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Prud@123
+      - POSTGRES_DB=postgres
+    networks:
+      - oracle2postgresql
+
+networks:
+  oracle2postgresql:
