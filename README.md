@@ -10,6 +10,10 @@ docker compose up -d
 
 ## Criação de um usuário (schema) e uma tabela no Oracle
 
+Conexão com o Oracle usando o TablePlus
+
+![Conexão com o Oracle](./assets/Oracle_Conexao.png "Conexão com o Oracle")
+
 ```sql
 
 alter session set "_ORACLE_SCRIPT"=true;
@@ -36,19 +40,15 @@ select * from rrgayer.produto;
 
 ```
 
-Conexão com o Oracle usando o TablePlus
-
-![Conexão com o Oracle](./assets/Oracle_Conexao.png "Conexão com o Oracle")
-
 Select na tabela Oracle usando o TablePlus
 
 ![Select na tabela produto](./assets/Oracle_Origem.png "Select na tabela produto")
 
 ## Instalação do Oracle Client no MacOS para utilização no Python
 
-[Oacle Instant Client - Download](https://www.oracle.com/database/technologies/instant-client/macos-intel-x86-downloads.html)
+[Oracle Instant Client - Download](https://www.oracle.com/database/technologies/instant-client/macos-intel-x86-downloads.html)
 
-Faça o download do arquivo instantclient-basic-macos.x64-19.16.0.0.0dbru.dmg e monte ele com dois cliques.
+Faça o download do arquivo **instantclient-basic-macos.x64-19.16.0.0.0dbru.dmg** e monte ele com dois cliques.
 
 Execute o script abaixo:
 
@@ -71,6 +71,8 @@ cx_Oracle.init_oracle_client(lib_dir="/Users/rrgayer/Downloads/instantclient_19_
 ```
 
 ## Instalação do PostgreSQL no MacOS para utilização no Python
+
+Esta instalação é necessária para a biblioteca **psycopg2** utilizada no programa Python
 
 ```sh
 
@@ -109,4 +111,8 @@ pip install psycopg2
 
 ```
 
-O macete é utilizar o métido read() no campo clob após a leitura!
+O macete é utilizar o método read() no campo clob após a leitura!
+
+## Programa Python completo
+
+[Programa Python](./Programa/main.py)
